@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+        <!-- Bootstrap CSS -->
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="SignUp.css">
+
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body class="SignUpLogin-BG">
+
+<!------------ Header ------------>
+
+  <header>
+  <div id="backgroundHeader"></div>
+    <img class="logo" src="Group 32.png" width="160">
+    <div class="MenuLayout">
+      <p class="menuBar" onclick="FetchPage('home')">Home</p>
+      <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
+      <p class="menuBar" id="clickable">Category</p>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+<!------------ search ------------>
+    <div id="searchIcon">
+      <img src="searchIcon.png" alt="searchIcon">
+    </div>
+    <div class="search">
+      <p class="menuBar" style=" text-decoration-line:none;">Search</p>
+    </div>
+    <div id="line"></div>
+<!------------ end of search part ------------>
+
+<!------------ left top corner icons ------------>
+  <!-- Language -->
+  <div class="rowIcon">
+    <div style="padding-top: 8px ;">
+      <img src="languageIcon.png" alt="languageIcon" id="clickable">
+    </div>
+        
+  <!-- cart -->
+    <div style="padding-top: 8px; padding-left: 8px;">
+      <img  src="cartIcon.png" alt="cartIcon" id="clickable">
+    </div>
+
+  <!-- Profile -->
+    <div style="padding-top: 8px; padding-right: 0px;">
+      <img src="profileIcon.png" alt="profileIcon" id="clickable">
+    </div>
+
+  </div><!-- end of rowTcon -->
+</header>
+
+
+<!------------ Main Content ------------>
+
+<div class="container">
+    <div class="row">
+        <div class="col ">
+            <div class="card">
+                <div class="card-body">
+                    <!-- sign up form -->
+                    <form class="mt-4" id="SignUpForm">
+                        <h2 class="mb-4">Sign Up</h2>
+                        <span><h4> you already have an account you can 
+                          <h4 style="text-decoration-line: underline; color: var(--7-ca-0-a-3, #7CA0A3); ">Login here !</h4>
+                        </span>
+                        <br>
+                        <div class="form-group">
+                            <label for="SignUpUserName"><i class="material-icons">&#xe7ff;</i> User Name</label>
+                            <input type="text" class="form-control" id="SignUpUserName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignUpPassword"><i class="material-icons">&#xe899;</i>
+                              Password</label>
+                            <input type="password" class="form-control" id="SignUpPassword" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="SignUpPasswordConf">Confirm Password</label>
+                            <input type="password" class="form-control">
+                          <br>
+                        </div>
+                        <button type="submit" class="btn ">Sign Up</button>
+                    </form>
+
+                    <!-- Log in form
+                    <form class="mt-4" id="LoginForm">
+                        <h3>Login</h3>
+                        <div class="form-group">
+                            <label for="LoginUserName">User Name</label>
+                            <input type="text" class="form-control" id="LoginUserName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="LoginPassword">Password</label>
+                            <input type="password" class="form-control" id="LoginPassword" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Login</button>
+
+                        <div id="msg" style="color: red;"></div>
+
+                    </form> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+        <!------------ End of Main content ------------>
+
+
+
+        <!------------ footer ------------>
+        <footer>
+            <div class="footerContent">
+            <div class="row" style="gap: 60px; bottom: 0px; text-decoration-line: underline;">
+            <p id="clickable">Contact Us</p>
+            <p id="clickable">About Us</p>
+            <p id="clickable">Wholesale</p>
+            <p id="clickable">Work with Us</p>
+            <p id="clickable">Privacy Policy</p>
+            <p id="clickable">Delivery Policy</p>
+            <p id="clickable">Shops</p>
+            <p id="clickable">Franchisee</p>
+          </div>
+            <p style="text-shadow: none; margin-top: 0px;"> @2023 Coffee Beans International</p>
+          
+            <img src="twitter.png" alt="twitter" id="clickable">
+            <img src="instagram.png" alt="instagram" id="clickable">
+            <img src="facebook.png" alt="facebook" id="clickable">
+          </div>
+          </footer>  
+          <!------------ end of footer ------------>
+  
+  
+  <!------------ Axios ------------>
+          <script> 
+            function FetchPage(page)
+             {  axios.get(`/${page}`)
+               .then(response=> 
+               {document.querySelector('*').innerHTML = response.data;})
+               .catch(error =>{console.log("Error",error);});
+             }
+            </script>
+  
+  <!------------ Sign up & Login ------------>
+
+  <script>
+    //Get Reference for both the Forms
+    const SignUpForm = document.getElementById('SignUpForm');
+    const LoginForm = document .getElementById('LoginForm');
+    //Event Listener for SignUp
+    SignUpForm.addEventListener('submit',(e)=>{e.preventDefault();
+        const UserName1 = document.getElementById('SignUpUserName').value;
+        const Password1 = document.getElementById('SignUpPassword').value;
+    //Store the Information in IndexedDB
+    SaveDataToIndexedDB(UserName1, Password1);
+    });
+    //Event Listener for Login
+    LoginForm.addEventListener('submit',(e) =>{e.preventDefault();
+        const UserName2 = document.getElementById('LoginUserName').value;
+        const Password2 = document.getElementById('LoginPassword').value;
+        //Read the Information from IndexedDB
+    CheckDataInIndexedDB(UserName2,Password2);
+    });
+    //Function to Store Data in IndexedDB
+    function SaveDataToIndexedDB(UserName, Password)
+    {   const User = {username: UserName, password: Password};
+        const request = window.indexedDB.open('UserDB',1);
+        request.onerror = (event)=>
+        {console.error('Sorry. Error Creating IndexedDB Database');};
+        request.onsuccess = (event)=>
+        {   const db = event.target.result;
+            const transaction = db.transaction(['Users'],'readwrite');
+            const objectstore = transaction.objectStore('Users');
+            const addUserRequest = objectstore.add(User);
+            addUserRequest.onsuccess = ()=>
+            {console.log('User Data Saved Successfully!');};
+            transaction.onsuccess = ()=>{db.close();};
+        };
+        request.onupgradeneeded=(event)=>
+        {   const db = event.target.result;
+            db.createObjectStore('Users',{keyPath:'username'});
+        };
+    }
+    //Function to Checking User Data in the IndexedDB
+    function CheckDataInIndexedDB(UserName, Password)
+    {   const request = window.indexedDB.open('UserDB',1);
+        request.onerror = (event)=>{console.error('Error while Reading!');};
+        request.onsuccess = (event)=>
+        {   const db = event.target.result;
+            const transaction = db.transaction(['Users'],'readonly');
+            const objectstore = transaction.objectStore('Users');
+            const getUserRequest = objectstore.get(UserName);
+            getUserRequest.onsuccess = () =>
+            {   const User = getUserRequest.result;
+                if(User && User.password === Password)
+                {
+                    // console.log('Login Successful!');
+                    window.location.href = "home.html"
+                }
+                else {document.getElementById('msg').innerHTML = `UserName or Password Incorrect`;}
+            };
+            transaction.oncomplete= ()=>{db.close();};
+        };
+        request.onupgradeneeded=(event)=>
+        {   const db=event.target.result;
+            db.createObjectStore('Users',{keyPath:'UserName'});
+        };
+    }
+    </script>
+    
+
+  </body>
+  </html>
+  

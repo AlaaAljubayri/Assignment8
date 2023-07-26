@@ -1,0 +1,435 @@
+*{
+    box-sizing: border-box;
+}
+
+#clickable:hover
+{
+  cursor: pointer;
+}
+
+a:hover
+{
+  color:#DFD6C3;
+  opacity: 1;
+  font-size: larger;
+}  
+
+a
+{
+background: #2e595c00;
+color:#DFD6C3;
+}
+.row 
+{
+  display: flex;
+  padding: 10px 19px;
+  justify-content: center;
+  align-items: flex-start;
+  margin-left: 60px;
+  margin-right: 60px;
+  gap: 10px;
+  position:relative;
+}
+
+/* ---------- Header style ---------- */
+#backgroundHeader
+{
+    width: 100%;
+    height: 80px;
+    flex-shrink: 0;
+    background: rgba(9, 50, 52, 0.559);    
+    position: absolute;
+}
+
+.logo
+{
+    position: absolute;
+    width: 276px;
+    height: 100px;
+    left: 680px;
+    z-index: 1;
+    filter: drop-shadow(0px 9px 38px #000000)
+}
+
+header 
+{
+    background-color: #f1f1f1;
+    /* color: black; */
+    font-size: 10px; 
+    font-weight: bold;
+    top: 0px;
+    transition: 0.2s;
+    position: absolute;
+    font-family: 'Times New Roman', Times, serif;
+    /* width: 1440px;
+    height: 521px; */
+    left: 0px;
+    /* filter: drop-shadow(0px 28px 46px rgba(0, 0, 0, 0.25)); */
+}
+
+.MenuLayout
+{
+    position: absolute;
+    text-align: left;
+    display: flex;
+    flex-direction: row;
+    flex-shrink: 0;
+    gap: 59px;
+    padding-left: 20px;
+}
+
+.menuBar
+{
+    font-size: 24px;
+    top:0px;
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 30px;
+    text-align: left;
+    text-decoration-line: underline;
+    color: #DFD6C3;
+    text-shadow: 0px 4px 15px #000000;
+    order: 0;
+    flex-grow: 0;
+    z-index: 1;
+    display: flex;
+    flex-direction: row;
+    order: 0;
+    flex-grow: 0;
+    justify-content: left;
+}
+
+/* ---------- search ---------- */
+
+#searchIcon
+{
+    width: 30px;
+    height: 30.003px;
+    flex-shrink: 0;
+    position: absolute;
+    left: 1110px;
+    top: 14px;
+}
+
+.search
+{
+    position: absolute;
+    left: 1170px;
+    display: flex;
+    width: 72px;
+    height: 28px;
+    flex-direction: column;
+    flex-shrink: 0;
+    top: 5px;
+}
+
+#line
+{
+    background:#DFD6C3 ;
+    fill: #DFD6C3;
+    stroke-width: 3px;
+    stroke: var(--d-9-d-9-d-9, #DFD6C3);
+    stroke-linecap:round;
+    fill:none;
+    filter: drop-shadow(0px 4px 13px rgba(0, 0, 0, 0.25));
+    position: absolute;
+    left: 1120px;
+    top: 60px;
+    width: 220px;
+    height: 3px;
+}
+
+.CoffeeBeansBackground
+{
+    height: 950.794px;
+    background: url(shopNow\ Background\ img.png);
+    background-size: cover;
+}
+
+.rowIcon 
+{
+    display: flex;
+    text-align: left;
+    margin-left: 1410px;
+    flex-direction: row;
+    gap: 0px;
+    position:absolute;
+}
+
+/* ---------- End of Header style ---------- */
+
+
+/* ---------- Main content style ---------- */
+
+.ProductBackground
+{
+    /* width: 800px; */
+    height: 800px;
+    background: rgba(217, 217, 217, 0.83);
+    margin-top: 110px;
+    margin-left: 80px;
+    margin-right: 80px;
+    /* padding: 40px; */
+    /* position: absolute; */
+    /* -ms-transform: translateY(-50%);
+    transform: translateY(-50%); */
+}
+
+
+/* Column container */
+.rowD 
+{  
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+/* Create two unequal columns that sits next to each other */
+/* Sidebar/left column */
+.side 
+{
+    flex: 40%;
+    -ms-flex: 40%; /* IE10 */
+    padding: 30px 0px 0px 30px;
+}
+
+/* Details column */
+.DetailsColumn {   
+    flex: 60%;
+    -ms-flex: 60%; /* IE10 */
+  }
+
+.productImg
+{
+    width: 100%;
+    height: auto;
+}
+
+#price
+{
+    text-align: left;
+    color: #1F4C47;
+    line-height: 0.5 ;
+    font-family: 'Josefin Sans';
+    font-size: 35px;
+}
+
+.heartIcon
+{
+    /* top: 50px; */
+    width: 35px;
+    height: 32.992px;
+    /* flex-shrink: 0; */
+    margin-top: 5px;
+    /* flex: 10%; */
+}
+
+.shareIcon
+{
+    width: 35px;
+    height: 32.992px;
+    margin-top: 5px;
+
+    /* margin-top: 40px; */
+
+    /* flex-shrink: 0; */
+    /* padding-top: 0px; */
+    /* flex: 10%; */
+
+}
+
+.detailsStyle
+{
+    color: #7CA0A3;
+    font-family: 'Josefin Sans';
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+.smallDetailsStyle
+{
+    color: #767575;
+    font-family: 'Sen';
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    text-transform: capitalize;
+}
+
+
+.shopButton
+{
+  position: relative;
+  display: flex;
+  padding: 10px 0px 10px 75px;
+  font-family: 'Sen';
+  width: 100%;
+  height: 48px;
+  font-size: 22px;
+  text-transform: capitalize;
+  border: none;
+  outline: none;
+  color: #c2b7a1;
+  background: #1F494C;
+  border-radius: 5px;
+  transition: 0.5s;
+  cursor: pointer;
+}
+
+.shopButton:hover
+  {
+    opacity: 1;
+    background: #2e595c;
+    color:#DFD6C3;
+  }
+
+
+/* .shopButton
+{
+position: absolute;
+margin-right: 30px;
+width: 100%;
+height: 48px;
+left: 25px;
+top: 250px;
+background: rgba(31, 73, 76, 0.81);
+border-radius: 5px;
+color: var(--dfd-6-c-3, #fafaf8);
+text-align: center;
+text-shadow: 0px 4px 15px 0px #000;
+font-family: Josefin Sans;
+font-size: 24px;
+font-style: normal;
+font-weight: 400;
+} */
+
+
+
+.counter
+{
+    width: 150px;
+    height: 40px;
+    font-family: 'IBM Plex Sans', sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-style: solid;
+    border-color: #1F4C47;
+    border-radius: 40px;
+}
+
+.counter input {
+      width: 50px;
+      padding: 0;
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      border: 0;
+      line-height: 30px;
+      font-size: 20px;
+      text-align: center;
+      background: rgba(31, 73, 76, 0);
+      outline: 0;
+  }
+
+.counter span {
+      display: block;
+      font-size: 25px;
+      padding: 0;
+      margin: 0;
+      font-family: 'IBM Plex Sans', sans-serif;
+      padding: 0 10px;
+      border-radius: 50px;
+      cursor: pointer;
+      background:#c5c7c7d6;
+
+      user-select: none;
+      color:rgba(31, 73, 76, 0.81);
+  }
+
+/* ---------- end of Main content style ---------- */
+
+
+
+/* ---------- footer style ---------- */
+footer 
+{
+    position: absolute;
+    left: 0px;
+    /* top: 946px; */
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: #1F494C;
+}
+
+.footerContent
+{
+    font-family: 'Old Standard TT';
+    font-style: normal;
+    font-weight: 100;
+    font-size: 20px;
+    line-height: 20px;
+    text-align: center;
+    text-transform: capitalize;
+    color: #DFD6C3;
+    text-shadow: 0px 4px 15px #000000;
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    padding: 10px;
+    z-index: 1;    
+}
+/* ---------- end footer style ---------- */
+
+
+@media only screen and (min-width: 100px)
+{
+    /* For mobile phones: */
+    .homeBackground, footer, #backgroundHeader, #menuBar, 
+    #msgCoffee1, header, .column, .CoffeeBeansBackground
+
+
+    {
+        width: 100%;
+    }
+}
+
+
+@media only screen and (max-width: 600px)
+{
+    /* For mobile phones: */
+ .ProductBackground
+
+    {
+        width: 100%;
+    }
+}
+
+/* For Mobile Devices */
+@media screen and(max-width:767px)
+{
+    .flex-container{flex-direction: column;}
+    .flex-item{width:100%;}
+}
+/* For Tablets */
+@media screen and(min-width:768px) and (max-width:1023px)
+{
+    .flex-container{flex-direction: row;flex-wrap: wrap;}
+    .flex-item{width:50%;}
+}
+/* For Desktops */
+@media screen and(min-width:1024px)
+{
+    .flex-container{flex-direction: row;flex-wrap: wrap;}
+    .flex-item{width:33.33%;}
+}
+
+
+
+

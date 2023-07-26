@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="home.css">
+    <title>Document</title>
+</head>
+<style>
+</style>
+
+<body >
+
+<!------------ Header ------------>
+    <header>
+      <img src="Group 30.png" class="homeBackground">
+    <div id="backgroundHeader"></div>
+      <img class="logo" src="Group 32.png" width="160">
+
+      <div class="MenuLayout">
+        <p class="menuBar" onclick="FetchPage('home')">Home</p>
+        <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
+        <p class="menuBar"> Category</p>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+      
+<!------------ search ------------>
+      <div id="searchIcon">
+        <img src="searchIcon.png" alt="searchIcon">
+      </div>
+      <div class="search">
+        <p class="menuBar" style=" text-decoration-line:none;">Search</p>
+      </div>
+      <div id="line"></div>
+<!------------ end of search part ------------>
+
+<!------------ left top corner icons ------------>
+    <!-- Language -->
+    <div class="rowIcon">
+      <div style="padding-top: 8px ;">
+        <img src="languageIcon.png" alt="languageIcon" id="clickable">
+      </div>
+          
+    <!-- cart -->
+      <div style="padding-top: 8px; padding-left: 8px;">
+        <img  src="cartIcon.png" alt="cartIcon" id="clickable">
+      </div>
+  
+    <!-- Profile -->
+      <div style="padding-top: 8px ; padding-right: 0px;">
+        <img src="profileIcon.png" alt="profileIcon" id="clickable">
+      </div>
+
+    </div><!-- End of left top corner icons -->
+  </header>
+<!------------ End of Header ------------>
+
+
+<!------------ Main content ------------>
+<!-- two images-->
+  <div class="img2"></div>
+  <div class="img3"></div>
+
+<!-- main msg + shop button -->
+  <div id="msgCoffee1" style="line-height: 0;">
+    <p>Coffee</p>
+    <p style="font-size: 40px;">is a Culture, Life and Passion...</p>
+    <button class="shopButton" onclick="FetchPage('shopNow')">Shop Now!</button>
+    <p class="menuBar" style="top: 70px; left: 5px; position: relative; text-decoration-line: none;">See our Best Seller</p>
+    <p class="menuBar" onclick="FetchPage('bestSeller')" style="top:14px; left: 195px; position: relative;"><strong>here</strong></p>
+  </div>
+<!------------ End of Main content ------------>
+
+<!------------ footer ------------>
+<footer>
+  <div class="footerContent">
+    <div class="row" style="gap: 60px; bottom: 0px; text-decoration-line: underline;">
+      <p id="clickable">Contact Us</p>
+      <p id="clickable">About Us</p>
+      <p id="clickable">Wholesale</p>
+      <p id="clickable">Work with Us</p>
+      <p id="clickable">Privacy Policy</p>
+      <p id="clickable">Delivery Policy</p>
+      <p id="clickable">Shops</p>
+      <p id="clickable">Franchisee</p>
+    </div>
+    <p style="text-shadow: none; margin-top: 0px;"> @2023 Coffee Beans International</p>    
+    <img src="twitter.png" alt="twitter" id="clickable">
+    <img src="instagram.png" alt="instagram" id="clickable">
+    <img src="facebook.png" alt="facebook" id="clickable">
+  </div>
+</footer>
+<!------------ end of footer ------------>
+
+
+<!------------ Axios ------------>
+<script> 
+function FetchPage(page)
+ {  axios.get(`/${page}`)
+   .then(response=> 
+   {document.querySelector('*').innerHTML = response.data;})
+   .catch(error =>{console.log("Error",error);});
+ }
+</script>
+
+</body>
+</html>

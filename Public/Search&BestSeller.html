@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Search&BestSeller.css">
+    <title>Document</title>
+</head>
+<style>
+</style>
+<body >
+
+<!------------ Header ------------>
+
+    <header >
+    <div id="backgroundHeader"></div>
+      <img class="logo" src="Group 32.png" width="160">
+
+      <div class="MenuLayout">
+        <p class="menuBar" onclick="FetchPage('home')">Home</p>
+        <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
+        <p class="menuBar" id="clickable">Category</p>
+      </div>
+      <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
+
+      
+
+<!------------ search ------------>
+      <div id="searchIcon">
+        <img src="searchIcon.png" alt="searchIcon">
+      </div>
+      <div class="search">
+        <p class="menuBar" style=" text-decoration-line:none;">Search</p>
+      </div>
+      <div id="line"></div>
+<!------------ end of search part ------------>
+
+<!------------ left top corner icons ------------>
+    <!-- Language -->
+    <div class="rowIcon">
+      <div style="padding-top: 8px ;">
+        <img src="languageIcon.png" alt="languageIcon" id="clickable">
+      </div>
+          
+    <!-- cart -->
+      <div style="padding-top: 8px; padding-left: 8px;">
+        <img  src="cartIcon.png" alt="cartIcon" id="clickable">
+      </div>
+  
+    <!-- Profile -->
+      <div style="padding-top: 8px ; padding-right: 0px;">
+        <img src="profileIcon.png" alt="profileIcon" id="clickable">
+      </div>
+
+    </div><!-- End of left top corner icons -->
+
+      <p id="msgCoffee">Start your day with <br> a cup of coffee...<br>Start your  day with Coffee Beans!</p>
+      <button class="shopButton" onclick="FetchPage('shopNow')">Shop Now!</button>
+
+    <img class="SearchBackground" src="SearchBackground.png">
+    <p class="hr-lines"><i>Best Seller</i></p>
+
+  </header>
+<!------------ End of Header ------------>
+
+
+<!------------ Main content ------------>
+
+<!------------ search ------------>
+
+<!-- best seller slidershow -->
+<div class="BestSellerBG" style="background: url(BestSellerBackground2.png);"></div>
+<div class="BestSellerBG" style="background: url(BestSellerBackground1.png); left: 20px; top: 400px;"></div>
+
+<section class="product"> 
+    <button class="pre-btn"><img src="images/arrow.png" alt=""></button>
+    <button class="nxt-btn"><img src="images/arrow.png" alt=""></button>
+
+    <div class="product-container">
+
+        <div class="product-card" id="a">
+            <div class="product-image">
+                <span style="color: red;">50% off</span>
+                <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+                <img src="product img.png" class="product-thumb" alt="">
+                <button class="card-btn">add to Cart</button>
+            </div>
+            <div class="product-info">
+                <span class="product-brand" style="font-style: normal;">Ethiopia</span>
+                <span class="price">$20</span> 
+                <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+                <p class="product-short-description">a short line about the cloth..</p>
+            </div>
+        </div>
+
+        <div class="product-card" id="a">
+          <div class="product-image">              
+            <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+            <span style="color: rgb(21, 145, 4);">Buy 1 & Get <strong style="font-size: 20px;">1 Free</strong></span>
+              <img src="product img.png" class="product-thumb" alt="">
+              <button class="card-btn">add to Cart</button>
+          </div>
+          <div class="product-info">
+              <span class="product-brand">Ethiopia</span>
+              <span class="price">$20</span> 
+              <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+              <p class="product-short-description">a short line about the cloth..</p>
+          </div>
+      </div>
+
+
+      <div class="product-card" id="a">
+        <div class="product-image">
+            <span style="color: red;">50% off</span>
+            <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+            <img src="product img.png" class="product-thumb" alt="">
+            <button class="card-btn">add to Cart</button>
+        </div>
+        <div class="product-info">
+            <span class="product-brand">Ethiopia</span>
+            <span class="price">$20</span> 
+            <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+            <p class="product-short-description">a short line about the cloth..</p>
+        </div>
+    </div>
+
+
+    <div class="product-card" id="a">
+      <div class="product-image">
+          <span style="color: red;">50% off</span>
+          <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+          <img src="product img.png" class="product-thumb" alt="">
+          <button class="card-btn">add to Cart</button>
+      </div>
+      <div class="product-info">
+          <span class="product-brand">Ethiopia</span>
+          <span class="price">$20</span> 
+          <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+          <p class="product-short-description">a short line about the cloth..</p>
+      </div>
+  </div>
+
+
+  <div class="product-card" id="a">
+    <div class="product-image">
+        <span style="color: red;">50% off</span>
+        <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+        <img src="product img.png" class="product-thumb" alt="">
+        <button class="card-btn">add to Cart</button>
+    </div>
+    <div class="product-info">
+        <span class="product-brand">Ethiopia</span>
+        <span class="price">$20</span> 
+        <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+        <p class="product-short-description">a short line about the cloth..</p>
+    </div>
+</div>
+
+
+<div class="product-card" id="a">
+  <div class="product-image">
+      <span style="color: red;">50% off</span>
+      <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+      <img src="product img.png" class="product-thumb" alt="">
+      <button class="card-btn">add to Cart</button>
+  </div>
+  <div class="product-info">
+      <span class="product-brand">Ethiopia</span>
+      <span class="price">$20</span> 
+      <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+      <p class="product-short-description">a short line about the cloth..</p>
+  </div>
+</div>
+
+
+<div class="product-card" id="a">
+  <div class="product-image">
+      <span style="color: red;">50% off</span>
+      <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+      <img src="product img.png" class="product-thumb" alt="">
+      <button class="card-btn">add to Cart</button>
+  </div>
+  <div class="product-info">
+      <span class="product-brand">Ethiopia</span>
+      <span class="price">$20</span> 
+      <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+      <p class="product-short-description">a short line about the cloth..</p>
+  </div>
+</div>
+
+
+<div class="product-card" id="a">
+  <div class="product-image">
+      <span style="color: red;">50% off</span>
+      <img class="heartIcon" src="heartIcon.png" alt="heartIcon">
+      <img src="product img.png" class="product-thumb" alt="">
+      <button class="card-btn">add to Cart</button>
+  </div>
+  <div class="product-info">
+      <span class="product-brand">Ethiopia</span>
+      <span class="price">$20</span> 
+      <p class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</p>
+      <p class="product-short-description">a short line about the cloth..</p>
+  </div>
+</div>
+
+
+
+
+
+
+        
+        <!-- <div class="product-card">
+            <div class="product-image">
+                <span class="discount-tag">50% off</span>
+                <img src="images/card7.jpg" class="product-thumb" alt="">
+                <button class="card-btn">add to wishlist</button>
+            </div>
+            <div class="product-info">
+                <h2 class="product-brand">brand</h2>
+                <p class="product-short-description">a short line about the cloth..</p>
+                <span class="price">$20</span><span class="actual-price">$40</span>
+            </div>
+        </div> -->
+
+
+
+
+    </div>
+</section>
+
+
+
+<!------------ End of Main content ------------>
+
+<!------------ footer ------------>
+<footer>
+  <div class="footerContent">
+    <div class="row" style="gap: 60px; bottom: 0px; text-decoration-line: underline;">
+      <p id="clickable">Contact Us</p>
+      <p id="clickable">About Us</p>
+      <p id="clickable">Wholesale</p>
+      <p id="clickable">Work with Us</p>
+      <p id="clickable">Privacy Policy</p>
+      <p id="clickable">Delivery Policy</p>
+      <p id="clickable">Shops</p>
+      <p id="clickable">Franchisee</p>
+    </div>
+    <p style="text-shadow: none; margin-top: 0px;"> @2023 Coffee Beans International</p>    
+    <img src="twitter.png" alt="twitter" id="clickable">
+    <img src="instagram.png" alt="instagram" id="clickable">
+    <img src="facebook.png" alt="facebook" id="clickable">
+  </div>
+</footer>
+<!------------ end of footer ------------>
+
+<!-- Best seller card slider show -->
+<script>
+const productContainers = [...document.querySelectorAll('.product-container')];
+const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+productContainers.forEach((item, i) => {
+let containerDimensions = item.getBoundingClientRect();
+let containerWidth = containerDimensions.width;
+
+nxtBtn[i].addEventListener('click', () => {
+    item.scrollLeft += containerWidth;
+})
+
+preBtn[i].addEventListener('click', () => {
+    item.scrollLeft -= containerWidth;
+})
+})
+</script>
+
+
+<!------------ Axios ------------>
+<script> 
+  function FetchPage(page)
+   {  axios.get(`/${page}`)
+     .then(response=> 
+     {document.querySelector('*').innerHTML = response.data;})
+     .catch(error =>{console.log("Error",error);});
+   }
+  </script>
+
+</body>
+</html>
