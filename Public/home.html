@@ -2,8 +2,10 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link rel="stylesheet" href="home.css">
     <title>Document</title>
+
 </head>
 <style>
 </style>
@@ -12,13 +14,16 @@
     <header>
       <img src="Group 30.png" class="homeBackground">
     <div id="backgroundHeader"></div>
-      <img class="logo" src="Group 32.png" width="160">
+      <img class="logo" src="Group 32.png" >
 
       <div class="MenuLayout">
-        <p class="menuBar" onclick="FetchPage('home')">Home</p>
-        <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
+        <!-- <p class="menuBar" onclick="FetchPage('home')">Home</p>
+        <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p> -->
+        <p class="menuBar"><a href="home.html">Home</a></p>
+        <p class="menuBar"><a href="ShopNow.html">Shop</a></p>
         <p class="menuBar"> Category</p>
-        <p class="menuBar" onclick="FetchPage('shopNow')"> Sign Up</p>
+        <!-- <p class="menuBar" onclick="FetchPage('shopNow')">SignUp</p> -->
+        <p class="menuBar"><a href="SignUp.html">SignUp</a></p>
       </div>
       <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
       
@@ -45,9 +50,35 @@
       </div>
   
     <!-- Profile -->
-      <div style="padding-top: 8px ; padding-right: 0px;">
+      <div class="openbtn" onclick="openNav()" style="padding-top: 8px ; padding-right: 0px;">
         <img src="profileIcon.png" alt="profileIcon" id="clickable">
       </div>
+
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
+        <a href="#">Profile</a>
+        <a href="#">Log in</a>
+        <a href="#">Sign Up</a>
+      </div>
+      
+      <!-- <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button> -->
+
+
+
+<!-- 
+      <div class="dropdown">
+        <button onclick="myFunction()" class="dropbtn">
+          <i class="material-icons">&#xe8a6;</i>
+          <div class="dropdownIcon"></div>
+          <img src="profileIcon.png" alt="profileIcon" id="clickable" style="padding-top: 8px ; padding-right: 0px;"> 
+        </button>
+        <div id="myDropdown" class="dropdown-content">
+          <a href="#home">Home</a>
+          <a href="#about">About</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div> -->
+      
 
     </div><!-- End of left top corner icons -->
   </header>
@@ -89,6 +120,42 @@
   </div>
 </footer>
 <!------------ end of footer ------------>
+
+
+<script>
+  function openNav() {
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  
+  function closeNav() {
+    document.getElementById("mySidepanel").style.width = "0";
+  }
+  </script>
+
+
+<!------------ dropdown menu ------------>
+<!-- <script>
+  /* When the user clicks on the button, 
+  toggle between hiding and showing the dropdown content */
+  function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+  }
+  
+  // Close the dropdown if the user clicks outside of it
+  window.onclick = function(event) {
+    if (!event.target.matches('.dropbtn')) {
+      var dropdowns = document.getElementsByClassName("dropdown-content");
+      var i;
+      for (i = 0; i < dropdowns.length; i++) {
+        var openDropdown = dropdowns[i];
+        if (openDropdown.classList.contains('show')) {
+          openDropdown.classList.remove('show');
+        }
+      }
+    }
+  }
+  </script> -->
+  
 
 
 <!------------ Axios ------------>
