@@ -15,16 +15,16 @@
       <img src="Group 30.png" class="homeBackground">
     <div id="backgroundHeader"></div>
       <img class="logo" src="Group 32.png" >
-
+<!-- 
       <div class="MenuLayout">
-        <!-- <p class="menuBar" onclick="FetchPage('home')">Home</p>
+         <p class="menuBar" onclick="FetchPage('home')">Home</p>
         <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p> -->
-        <p class="menuBar"><a href="home.html">Home</a></p>
+        <!-- <p class="menuBar"><a href="home.html">Home</a></p>
         <p class="menuBar"><a href="ShopNow.html">Shop</a></p>
-        <p class="menuBar"> Category</p>
+        <p class="menuBar"> Category</p> -->
         <!-- <p class="menuBar" onclick="FetchPage('shopNow')">SignUp</p> -->
-        <p class="menuBar"><a href="SignUp.html">SignUp</a></p>
-      </div>
+        <!-- <p class="menuBar"><a href="SignUp.html">SignUp</a></p>
+      </div> -->
       <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
       
 <!------------ search ------------>
@@ -49,35 +49,28 @@
         <img  src="cartIcon.png" alt="cartIcon" id="clickable">
       </div>
   
-    <!-- Profile -->
-      <div class="openbtn" onclick="openNav()" style="padding-top: 8px ; padding-right: 0px;">
+    <!-- Sign Up & Log in -->
+      <div style="padding-top: 8px ; padding-right: 0px;">
         <img src="profileIcon.png" alt="profileIcon" id="clickable">
       </div>
+     </div>
+
+
+     <button class="openbtn" onclick="openNav()">
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      </button>  
 
       <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
-        <a href="#">Profile</a>
-        <a href="#">Log in</a>
-        <a href="#">Sign Up</a>
+        <a href="home.html">Home</a>
+        <a href="ShopNow.html">Shop</a>
+        <a href="#">Category</a>
+        <a href="Login.html">Log in</a>
+        <a href="SignUp.html">Sign Up</a>
       </div>
-      
-      <!-- <button class="openbtn" onclick="openNav()">☰ Toggle Sidepanel</button> -->
-
-
-
-<!-- 
-      <div class="dropdown">
-        <button onclick="myFunction()" class="dropbtn">
-          <i class="material-icons">&#xe8a6;</i>
-          <div class="dropdownIcon"></div>
-          <img src="profileIcon.png" alt="profileIcon" id="clickable" style="padding-top: 8px ; padding-right: 0px;"> 
-        </button>
-        <div id="myDropdown" class="dropdown-content">
-          <a href="#home">Home</a>
-          <a href="#about">About</a>
-          <a href="#contact">Contact</a>
-        </div>
-      </div> -->
+    
       
 
     </div><!-- End of left top corner icons -->
@@ -121,6 +114,19 @@
 </footer>
 <!------------ end of footer ------------>
 
+
+
+<!------------ menu icon ------------>
+
+<!-- <script>
+  function openNav(x) {
+    x.classList.toggle("change");
+    document.getElementById("mySidepanel").style.width = "250px";
+  }
+  </script> -->
+
+
+<!------------ side pannel ------------>
 
 <script>
   function openNav() {
