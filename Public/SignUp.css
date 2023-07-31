@@ -156,6 +156,62 @@ header
     position:absolute;
 }
 
+
+/* menu icon */
+.menu-icon {
+    width: 35px;
+    height: 5px;
+    background-color:#DFD6C3;
+    margin: 6px 0;
+  }
+  /* side panel */
+  .sidepanel  {
+    width: 0px;
+    position: fixed;
+    z-index: 1;
+    height: 100%;
+    left: 0;
+    background:rgb(9, 50, 52);   
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 100px;
+    text-align: left;
+  }
+  
+  .sidepanel a {
+    padding: 8px 20px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    font-weight: 400;
+    line-height: 30px;
+    color: #DFD6C3;
+    display: block;
+    transition: 0.3s;
+    border: #DFD6C3;
+  }
+  
+  .sidepanel a:hover {
+    font-size: 23px;
+  }
+  
+  .sidepanel .closebtn {
+    position: absolute;
+    top: 0;
+    right: 0px;
+    font-size: 25px;
+  }
+  
+  .openbtn {
+    font-size: 20px;
+    cursor: pointer;
+    background-color: #11111100;
+    position: absolute;  
+    padding: 20px 20px;
+    border: none;
+    float: left;
+  }
+
+
 /* ----------- SignUp -----------*/
 
 .btn

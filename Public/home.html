@@ -3,28 +3,19 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
     <link rel="stylesheet" href="home.css">
     <title>Document</title>
 
 </head>
-<style>
-</style>
 <body >
 <!------------ Header ------------>
     <header>
       <img src="Group 30.png" class="homeBackground">
     <div id="backgroundHeader"></div>
       <img class="logo" src="Group 32.png" >
-<!-- 
-      <div class="MenuLayout">
-         <p class="menuBar" onclick="FetchPage('home')">Home</p>
-        <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p> -->
-        <!-- <p class="menuBar"><a href="home.html">Home</a></p>
-        <p class="menuBar"><a href="ShopNow.html">Shop</a></p>
-        <p class="menuBar"> Category</p> -->
-        <!-- <p class="menuBar" onclick="FetchPage('shopNow')">SignUp</p> -->
-        <!-- <p class="menuBar"><a href="SignUp.html">SignUp</a></p>
-      </div> -->
       <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
       
 <!------------ search ------------>
@@ -49,31 +40,31 @@
         <img  src="cartIcon.png" alt="cartIcon" id="clickable">
       </div>
   
-    <!-- Sign Up & Log in -->
+    <!-- Profile -->
       <div style="padding-top: 8px ; padding-right: 0px;">
         <img src="profileIcon.png" alt="profileIcon" id="clickable">
       </div>
      </div>
+    </div><!-- End of left top corner icons -->
 
-
+     <!-- menu icon -->
      <button class="openbtn" onclick="openNav()">
       <div class="menu-icon"></div>
       <div class="menu-icon"></div>
       <div class="menu-icon"></div>
       </button>  
-
+      <!-- side panel -->
       <div id="mySidepanel" class="sidepanel">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
-        <a href="home.html">Home</a>
-        <a href="ShopNow.html">Shop</a>
-        <a href="#">Category</a>
-        <a href="Login.html">Log in</a>
-        <a href="SignUp.html">Sign Up</a>
+        <a href="home.html"><i class="fa fa-home" style="padding-right: 10px;"></i>  Home</a>
+        <a href="ShopNow.html"><i class="material-icons" style="padding-right: 10px;">&#xe8cb;</i>  Shop</a>
+        <a href="#"><i style="font-size:24px; padding-right: 10px;" class="fa" >&#xf233;</i>  Category</a>
+        <a href="SignUp.html"><i class="fa" style="padding-right: 10px;">&#xf234;</i>  Sign Up</a>
+        <a href="Login.html"><i style="font-size:24px; padding-right: 10px;" class="fa">&#xf090;</i>  Log in</a>
       </div>
     
       
 
-    </div><!-- End of left top corner icons -->
   </header>
 <!------------ End of Header ------------>
 
@@ -87,9 +78,9 @@
   <div id="msgCoffee1" style="line-height: 0;">
     <p>Coffee</p>
     <p style="font-size: 40px;">is a Culture, Life and Passion...</p>
-    <button class="shopButton" onclick="FetchPage('shopNow')">Shop Now!</button>
+    <button class="shopButton"><a href="ShopNow.html">Shop Now!</a></button>
     <p class="menuBar" style="top: 70px; left: 5px; position: relative; text-decoration-line: none;">See our Best Seller</p>
-    <p class="menuBar" onclick="FetchPage('bestSeller')" style="top:14px; left: 195px; position: relative;"><strong>here</strong></p>
+    <p class="menuBar" style="top:14px; left: 195px; position: relative;"><a href="Search&BestSeller.html"><strong>here</strong></a></p>
   </div>
 <!------------ End of Main content ------------>
 
@@ -116,52 +107,15 @@
 
 
 
-<!------------ menu icon ------------>
-
-<!-- <script>
-  function openNav(x) {
-    x.classList.toggle("change");
-    document.getElementById("mySidepanel").style.width = "250px";
-  }
-  </script> -->
-
 
 <!------------ side pannel ------------>
 
 <script>
-  function openNav() {
-    document.getElementById("mySidepanel").style.width = "250px";
-  }
-  
-  function closeNav() {
-    document.getElementById("mySidepanel").style.width = "0";
-  }
-  </script>
-
-
-<!------------ dropdown menu ------------>
-<!-- <script>
-  /* When the user clicks on the button, 
-  toggle between hiding and showing the dropdown content */
-  function myFunction() {
-    document.getElementById("myDropdown").classList.toggle("show");
-  }
-  
-  // Close the dropdown if the user clicks outside of it
-  window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-      var dropdowns = document.getElementsByClassName("dropdown-content");
-      var i;
-      for (i = 0; i < dropdowns.length; i++) {
-        var openDropdown = dropdowns[i];
-        if (openDropdown.classList.contains('show')) {
-          openDropdown.classList.remove('show');
-        }
-      }
-    }
-  }
-  </script> -->
-  
+  function openNav() 
+  { document.getElementById("mySidepanel").style.width = "250px";}
+  function closeNav() 
+  {document.getElementById("mySidepanel").style.width = "0";}
+</script>
 
 
 <!------------ Axios ------------>

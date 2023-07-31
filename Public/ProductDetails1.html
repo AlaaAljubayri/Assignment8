@@ -4,17 +4,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,100&family=Sen&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="ProductDetails.css">
     <title>Document</title>
 </head>
-<style>
+<!-- <style>
   *{
     
     /* font-family: 'Roboto', sans-serif; */
     font-family: 'Sen', 'Roboto';
   }
-</style>
+</style> -->
 <body class="CoffeeBeansBackground" >
 
 <!------------ Header ------------>
@@ -22,11 +25,6 @@
   <div id="backgroundHeader"></div>
   <div style="padding: 0px 40px 0px 40px;">
     <img class="logo" src="Group 32.png" width="160">
-    <div class="MenuLayout">
-      <p class="menuBar" onclick="FetchPage('home')">Home</p>
-      <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
-      <p class="menuBar" id="clickable">Category</p>
-    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
  
@@ -60,8 +58,25 @@
   </div><!-- end of rowTcon -->
   </div>
 
+
+     <!-- menu icon -->
+     <button class="openbtn" onclick="openNav()">
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      </button>  
+      <!-- side panel -->
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
+        <a href="home.html"><i class="fa fa-home" style="padding-right: 10px;"></i>  Home</a>
+        <a href="ShopNow.html"><i class="material-icons" style="padding-right: 10px;">&#xe8cb;</i>  Shop</a>
+        <a href="#"><i style="font-size:24px; padding-right: 10px;" class="fa" >&#xf233;</i>  Category</a>
+        <a href="SignUp.html"><i class="fa" style="padding-right: 10px;">&#xf234;</i>  Sign Up</a>
+        <a href="Login.html"><i style="font-size:24px; padding-right: 10px;" class="fa">&#xf090;</i>  Log in</a>
+      </div>
+
+
 </header>
-<!------------ End of left top corner icons ------------>
 <!------------ End of Header ------------>
 
 
@@ -91,13 +106,6 @@
 
 
     </div>
-
-      <!-- <div class="quantity buttons_added" style="margin-left: 10px; ">
-        <input type="button" value="-" class="minus">
-        <input type="number" step="1" min="1" max="" name="quantity" value="1" title="Qty" class="input-text qty text" size="4" pattern="" inputmode="">
-        <input type="button" value="+" class="plus">
-      </div> -->
-
 
     <div class="DetailsColumn" style="padding: 50px 50px 0px 40px;">
 
@@ -134,13 +142,7 @@
     </div>
   </div> <!-- end of rowD -->
 </div> <!-- end of product background -->
-
-
-
-
-
-
-        <!------------ End of Main content ------------>
+ <!------------ End of Main content ------------>
 
 
 
@@ -167,8 +169,21 @@
         <!------------ end of footer ------------>
 
 
-        <script>
 
+<!------------ side pannel ------------>
+
+<script>
+  function openNav() 
+  { document.getElementById("mySidepanel").style.width = "250px";}
+  function closeNav() 
+  {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
+
+
+
+<!-- quantity -->
+<script>
 function increaseCount(a, b) {
   var input = b.previousElementSibling;
   var value = parseInt(input.value, 10);

@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="ShopNow.css">
     <title>Document</title>
 </head>
@@ -14,11 +17,6 @@
   <header>
   <div id="backgroundHeader"></div>
     <img class="logo" src="Group 32.png" width="160">
-    <div class="MenuLayout">
-      <p class="menuBar" onclick="FetchPage('home')">Home</p>
-      <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
-      <p class="menuBar" id="clickable">Category</p>
-    </div>
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
 <!------------ search ------------>
@@ -49,6 +47,24 @@
     </div>
 
   </div><!-- end of rowTcon -->
+
+  
+     <!-- menu icon -->
+     <button class="openbtn" onclick="openNav()">
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      <div class="menu-icon"></div>
+      </button>  
+      <!-- side panel -->
+      <div id="mySidepanel" class="sidepanel">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
+        <a href="home.html"><i class="fa fa-home" style="padding-right: 10px;"></i>  Home</a>
+        <a href="ShopNow.html"><i class="material-icons" style="padding-right: 10px;">&#xe8cb;</i>  Shop</a>
+        <a href="#"><i style="font-size:24px; padding-right: 10px;" class="fa" >&#xf233;</i>  Category</a>
+        <a href="SignUp.html"><i class="fa" style="padding-right: 10px;">&#xf234;</i>  Sign Up</a>
+        <a href="Login.html"><i style="font-size:24px; padding-right: 10px;" class="fa">&#xf090;</i>  Log in</a>
+      </div>
+
 </header>
 <!-- end of headerHome -->
 
@@ -63,10 +79,12 @@
   
   <div class="column">
     <div class="product-card" id="a">
-      <div class="product-image" onclick="FetchPage('product')">
-        <img src="product img.png" class="product-thumb" alt="">
+      <a href="ProductDetails1.html">
+        <div class="product-image">
+          <img src="product img.png" class="product-thumb" alt="">
           <button class="card-btn">add to Cart</button>
-      </div>
+        </div>
+      </a>
       <div class="product-info">
           <span class="product-brand" style="font-style: normal;">Ethiopia</span>
           <p class="product-short-description">a short line about the cloth..</p>
@@ -74,9 +92,9 @@
             <div class="column-left">
               <img src="heartIcon.png" alt="heartIcon">
             </div>
-            <div class="column-right">
+            <div class="column-right" style="padding-top: 0px;">
               <div class="price">$20</div><br>
-              <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+              <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
             </div>
           </div>
       </div>
@@ -86,10 +104,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image">
       <img src="product img2.png" class="product-thumb" alt="">
         <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -100,20 +120,22 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10;">$40</div>
           </div>
         </div>
     </div>
-</div>
+  </div>
 </div>
 
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image">
       <img src="product img3.png" class="product-thumb" alt="">
               <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -124,7 +146,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
           </div>
         </div>
     </div>
@@ -134,10 +156,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image">
       <img src="product img4.png" class="product-thumb" alt="">
               <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -148,7 +172,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
           </div>
         </div>
     </div>
@@ -158,10 +182,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image">
       <img src="product img2.png" class="product-thumb" alt="">        
         <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -172,7 +198,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
           </div>
         </div>
     </div>
@@ -188,10 +214,12 @@
 
     <div class="column">
       <div class="product-card" id="a">
-        <div class="product-image" onclick="FetchPage('product')">
+        <a href="ProductDetails1.html">
+        <div class="product-image">
             <img src="product img3.png" class="product-thumb" alt="">
             <button class="card-btn">add to Cart</button>
         </div>
+        </a>
         <div class="product-info">
             <span class="product-brand" style="font-style: normal;">Ethiopia</span>
             <p class="product-short-description">a short line about the cloth..</p>
@@ -202,7 +230,7 @@
               </div>
               <div class="column-right">
                 <div class="price">$20</div><br>
-                <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+                <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
               </div>
             </div>
         </div>
@@ -212,7 +240,8 @@
 
   <div class="column">
     <div class="product-card" id="a">
-      <div class="product-image" onclick="FetchPage('product')">
+      <a href="ProductDetails1.html">
+      <div class="product-image" >
         <img src="product img4.png" class="product-thumb" alt=""></a>          
           <button class="card-btn">add to Cart</button>
       </div>
@@ -226,7 +255,7 @@
             </div>
             <div class="column-right">
               <div class="price">$20</div><br>
-              <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+              <div class="actual-price" style="opacity: 0.5; font-weight: 10;">$40</div>
             </div>
           </div>
       </div>
@@ -236,10 +265,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image" >
       <img src="product img2.png" class="product-thumb" alt="">  
         <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -250,7 +281,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10;">$40</div>
           </div>
         </div>
     </div>
@@ -260,10 +291,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image">
         <img src="product img3.png" class="product-thumb" alt="">      
         <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -274,7 +307,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
           </div>
         </div>
     </div>
@@ -284,10 +317,12 @@
 
 <div class="column">
   <div class="product-card" id="a">
-    <div class="product-image" onclick="FetchPage('product')">
+    <a href="ProductDetails1.html">
+    <div class="product-image" >
         <img src="product img.png" class="product-thumb" alt="">        
         <button class="card-btn">add to Cart</button>
     </div>
+    </a>
     <div class="product-info">
         <span class="product-brand" style="font-style: normal;">Ethiopia</span>
         <p class="product-short-description">a short line about the cloth..</p>
@@ -298,7 +333,7 @@
           </div>
           <div class="column-right">
             <div class="price">$20</div><br>
-            <div class="actual-price" style="opacity: 0.5; font-weight: 10; font-size: 20px;">$40</div>
+            <div class="actual-price" style="opacity: 0.5; font-weight: 10; ">$40</div>
           </div>
         </div>
     </div>
@@ -334,6 +369,17 @@
         </div>
         </footer>  
         <!------------ end of footer ------------>
+
+
+<!------------ side pannel ------------>
+
+<script>
+  function openNav() 
+  { document.getElementById("mySidepanel").style.width = "250px";}
+  function closeNav() 
+  {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
 
 
 <!------------ Axios ------------>

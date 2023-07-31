@@ -40,8 +40,6 @@
 {
     flex: 10%;
     -ms-flex: 30%; /* IE10 */
-    /* margin-right: 70px; */
-    /* background-color: #f1f1f1; */
 }
 
 .column-left 
@@ -49,8 +47,7 @@
     flex: 50%;
     -ms-flex: 50%; /* IE10 */
     margin-top: 15px;
-    /* background-color: white; */
-    /* padding: 50px 50px 0px 40px; */
+
 }
 
 /* ---------- Header style ---------- */
@@ -66,7 +63,6 @@
 
 .homeBackground
 {
-  /* background: url(Group\ 30.png);  */
   width: 1440px;
   height: 595px; 
   position: absolute;
@@ -104,8 +100,6 @@ header
   position: absolute;
   text-align: left;
   display: flex;
-  /* flex-direction: row; */
-  /* flex-shrink: 0; */
   gap: 50px;
   padding-left: 20px;
 }
@@ -122,14 +116,8 @@ header
   text-decoration-line: underline;
   color: #DFD6C3;
   text-shadow: 0px 4px 15px #000000;
-  /* order: 0; */
-  /* flex-grow: 0; */
-  /* z-index: 1; */
   display: flex;
   cursor: pointer;
-  /* flex-direction: row; */
-  /* order: 0; */
-  /* flex-grow: 0; */
   justify-content: left;
 }
 
@@ -187,20 +175,24 @@ header
 /* ---------- End of Header style ---------- */
 
 
+/* menu icon */
+.menu-icon {
+  width: 35px;
+  height: 5px;
+  background-color:#DFD6C3;
+  margin: 6px 0;
+}
+/* side panel */
 .sidepanel  {
   width: 0px;
   position: fixed;
   z-index: 1;
   height: 100%;
-  /* top: 100px; */
   left: 0;
-  /* margin-top: 78px; */
-  /* background: rgba(9, 50, 52, 0.858);     */
   background:rgb(9, 50, 52);   
   overflow-x: hidden;
   transition: 0.5s;
   padding-top: 100px;
-  /* padding-right: 20px; */
   text-align: left;
 }
 
@@ -214,11 +206,9 @@ header
   display: block;
   transition: 0.3s;
   border: #DFD6C3;
-  /* border-style: none none solid none; */
 }
 
 .sidepanel a:hover {
-  /* color: #f1f1f1; */
   font-size: 23px;
 }
 
@@ -226,7 +216,6 @@ header
   position: absolute;
   top: 0;
   right: 0px;
-  /* padding-top: 60px; */
   font-size: 25px;
 }
 
@@ -240,147 +229,6 @@ header
   border: none;
   float: left;
 }
-
-/* .openbtn:hover {
-  background-color:#444;
-} */
-
-/* menu icon */
-
-.menu-icon {
-  width: 35px;
-  height: 5px;
-  background-color:#DFD6C3;
-  margin: 6px 0;
-}
-/* a#menu-icon {
-  display: inline-block;
-  padding: 10px;
-}
-a#menu-icon .bar {
-  margin: 3px;
-  width: 25px;
-  height: 3px;
-  background: #000;
-  border-radius: 1.5px;
-}
-
-a#menu-icon:not(.close):hover {
-  padding: 6px 10px;
-}
-a#menu-icon:not(.close):hover .bar {
-  margin: 5px 3px;
-}
-
-a#menu-icon.close .bar:first-child {
-  -webkit-transform: translateY(6px) rotate(45deg);
-      -ms-transform: translateY(6px) rotate(45deg);
-          transform: translateY(6px) rotate(45deg);
-}
-a#menu-icon.close .bar:nth-child(2) {
-  opacity: 0;
-}
-a#menu-icon.close .bar:last-child {
-  -webkit-transform: translateY(-6px) rotate(-45deg);
-      -ms-transform: translateY(-6px) rotate(-45deg);
-          transform: translateY(-6px) rotate(-45deg);
-} */
-
-/* .container {
-  display: inline-block;
-  cursor: pointer;
-}
-
-.bar1, .bar2, .bar3 {
-  width: 35px;
-  height: 5px;
-  background-color: #DFD6C3;
-  margin: 6px 0;
-  transition: 0.4s;
-}
-
-.change .bar1 {
-  transform: translate(0, 11px) rotate(-45deg);
-}
-
-.change .bar2 {opacity: 0;}
-
-.change .bar3 {
-  transform: translate(0, -11px) rotate(45deg);
-} */
-
-
-
-
-/* ---------- dropdown menu style ---------- */
-/* .dropdownIcon
-{
-  background: url(profileIcon.png);
-  width: 40px;
-  height: 40px;
-  padding-top: 8px ; 
-  padding-right: 0px;
-}
-.dropbtn {
-  background-color: #459cdaf0;
-  color: white;
-  padding: 16px;
-  font-size: 36px;
-  border: none;
-  cursor: pointer;
-}
-
-.dropbtn:hover, .dropbtn:focus {
-  background-color: #297fb9;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f1f1f1;
-  min-width: 160px;
-  overflow: auto;
-  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  color: black;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-}
-
-.dropdown a:hover {background-color: #ddd;}
-
-.show {display: block;} */
-
-
-/* ---------- Main content style ---------- */
-/* .shopButton
-{
-position: absolute;
-width: 234px;
-height: 48px;
-left: 25px;
-top: 250px;
-z-index: 1;
-background: rgba(25, 60, 56, 0.56);
-border-radius: 5px;
-color: var(--dfd-6-c-3, #DFD6C3);
-text-align: center;
-text-shadow: 0px 4px 15px 0px #000;
-font-family: Josefin Sans;
-font-size: 24px;
-font-style: normal;
-font-weight: 400;
-line-height: normal;
-} */
 
 .shopButton
 {
@@ -431,7 +279,6 @@ a
   position: absolute;
   left: 52px;
   top: 176px;
-  /* font-family: 'Old Standard TT'; */
   font-style: normal;
   font-weight: 700;
   font-size: 65px;
@@ -490,7 +337,6 @@ footer
   text-transform: capitalize;
   color: #DFD6C3;
   text-shadow: 0px 4px 15px #000000;
-  /* Inside auto layout */
   flex: none;
   order: 0;
   flex-grow: 0;

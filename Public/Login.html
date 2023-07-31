@@ -3,8 +3,12 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-        <!-- Bootstrap CSS -->
-        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="SignUp.css">
 
     <title>Document</title>
@@ -18,11 +22,11 @@
   <header>
   <div id="backgroundHeader"></div>
     <img class="logo" src="Group 32.png" width="160">
-    <div class="MenuLayout">
+    <!-- <div class="MenuLayout">
       <p class="menuBar" onclick="FetchPage('home')">Home</p>
       <p class="menuBar" onclick="FetchPage('shopNow')">Shop</p>
       <p class="menuBar" id="clickable">Category</p>
-    </div>
+    </div> -->
     <script src="https://cdn.jsdelivr.net/npm/axios@1.1.2/dist/axios.min.js"></script>
 
 <!------------ search ------------>
@@ -53,44 +57,45 @@
     </div>
 
   </div><!-- end of rowTcon -->
+
+  <!-- menu icon -->
+  <button class="openbtn" onclick="openNav()">
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    <div class="menu-icon"></div>
+    </button>  
+    <!-- side panel -->
+    <div id="mySidepanel" class="sidepanel">
+      <a href="javascript:void(0)" class="closebtn" onclick="closeNav()" style="border-style: none;">×</a>
+      <a href="home.html"><i class="fa fa-home" style="padding-right: 10px;"></i>  Home</a>
+      <a href="ShopNow.html"><i class="material-icons" style="padding-right: 10px;">&#xe8cb;</i>  Shop</a>
+      <a href="#"><i style="font-size:24px; padding-right: 10px;" class="fa" >&#xf233;</i>  Category</a>
+      <a href="SignUp.html"><i class="fa" style="padding-right: 10px;">&#xf234;</i>  Sign Up</a>
+      <a href="Login.html"><i style="font-size:24px; padding-right: 10px;" class="fa">&#xf090;</i>  Log in</a>
+    </div>
 </header>
 
 
 <!------------ Main Content ------------>
 
-<div class="container mt-5">
+<div class="container">
     <div class="row">
-        <div class="col-md-6 offset-md-3">
+        <div class="col ">
             <div class="card">
                 <div class="card-body">
-                    <!-- sign up form -->
-                    <form class="mt-4" id="SignUpForm">
-                        <h3 class="mb-4">Sign Up</h3>
-                        <div class="form-group">
-                            <label for="SignUpUserName">User Name</label>
-                            <input type="text" class="form-control" id="SignUpUserName" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="SignUpPassword">Password</label>
-                            <input type="password" class="form-control" id="SignUpPassword" required>
-                        </div>
-                        <div class="form-group">
-                            <label for="SignUpPasswordConf">Confirm Password</label>
-                            <input type="password" class="form-control">
-
-                        </div>
-                        <button type="submit" class="btn btn-primary">Sign Up</button>
-                    </form>
-
                     <!-- Log in form -->
                     <form class="mt-4" id="LoginForm">
-                        <h3>Login</h3>
+                        <h2>Login</h2>
+                        <span><h4>If you don't have an account you can 
+                          <h4 style="text-decoration-line: underline; "><a href="SignUp.html" style="color: var(--7-ca-0-a-3, #7CA0A3); ">Sign Up here !</a></h4>
+                        </span>
+                        <br>
                         <div class="form-group">
-                            <label for="LoginUserName">User Name</label>
+                            <label for="LoginUserName"><i class="material-icons">&#xe7ff;</i> User Name</label>
                             <input type="text" class="form-control" id="LoginUserName" required>
                         </div>
                         <div class="form-group">
-                            <label for="LoginPassword">Password</label>
+                            <label for="LoginPassword"><i class="material-icons">&#xe899;</i> Password</label>
                             <input type="password" class="form-control" id="LoginPassword" required>
                         </div>
                         <button type="submit" class="btn btn-primary">Login</button>
@@ -103,15 +108,6 @@
         </div>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
 
         <!------------ End of Main content ------------>
 
@@ -140,6 +136,16 @@
           <!------------ end of footer ------------>
   
   
+
+<!------------ side pannel ------------>
+
+<script>
+  function openNav() 
+  { document.getElementById("mySidepanel").style.width = "250px";}
+  function closeNav() 
+  {document.getElementById("mySidepanel").style.width = "0";}
+</script>
+
   <!------------ Axios ------------>
           <script> 
             function FetchPage(page)
@@ -149,75 +155,8 @@
                .catch(error =>{console.log("Error",error);});
              }
             </script>
-  
-  <!------------ Sign up & Login ------------>
 
-  <script>
-    //Get Reference for both the Forms
-    const SignUpForm = document.getElementById('SignUpForm');
-    const LoginForm = document .getElementById('LoginForm');
-    //Event Listener for SignUp
-    SignUpForm.addEventListener('submit',(e)=>{e.preventDefault();
-        const UserName1 = document.getElementById('SignUpUserName').value;
-        const Password1 = document.getElementById('SignUpPassword').value;
-    //Store the Information in IndexedDB
-    SaveDataToIndexedDB(UserName1, Password1);
-    });
-    //Event Listener for Login
-    LoginForm.addEventListener('submit',(e) =>{e.preventDefault();
-        const UserName2 = document.getElementById('LoginUserName').value;
-        const Password2 = document.getElementById('LoginPassword').value;
-        //Read the Information from IndexedDB
-    CheckDataInIndexedDB(UserName2,Password2);
-    });
-    //Function to Store Data in IndexedDB
-    function SaveDataToIndexedDB(UserName, Password)
-    {   const User = {username: UserName, password: Password};
-        const request = window.indexedDB.open('UserDB',1);
-        request.onerror = (event)=>
-        {console.error('Sorry. Error Creating IndexedDB Database');};
-        request.onsuccess = (event)=>
-        {   const db = event.target.result;
-            const transaction = db.transaction(['Users'],'readwrite');
-            const objectstore = transaction.objectStore('Users');
-            const addUserRequest = objectstore.add(User);
-            addUserRequest.onsuccess = ()=>
-            {console.log('User Data Saved Successfully!');};
-            transaction.onsuccess = ()=>{db.close();};
-        };
-        request.onupgradeneeded=(event)=>
-        {   const db = event.target.result;
-            db.createObjectStore('Users',{keyPath:'username'});
-        };
-    }
-    //Function to Checking User Data in the IndexedDB
-    function CheckDataInIndexedDB(UserName, Password)
-    {   const request = window.indexedDB.open('UserDB',1);
-        request.onerror = (event)=>{console.error('Error while Reading!');};
-        request.onsuccess = (event)=>
-        {   const db = event.target.result;
-            const transaction = db.transaction(['Users'],'readonly');
-            const objectstore = transaction.objectStore('Users');
-            const getUserRequest = objectstore.get(UserName);
-            getUserRequest.onsuccess = () =>
-            {   const User = getUserRequest.result;
-                if(User && User.password === Password)
-                {
-                    // console.log('Login Successful!');
-                    window.location.href = "home.html"
-                }
-                else {document.getElementById('msg').innerHTML = `UserName or Password Incorrect`;}
-            };
-            transaction.oncomplete= ()=>{db.close();};
-        };
-        request.onupgradeneeded=(event)=>
-        {   const db=event.target.result;
-            db.createObjectStore('Users',{keyPath:'UserName'});
-        };
-    }
-    </script>
-    
-
+    <script src="login.js"></script>
   </body>
   </html>
   
