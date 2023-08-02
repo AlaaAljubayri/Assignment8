@@ -20,7 +20,7 @@ function CheckDataInIndexedDB(UserName, Password)
         getUserRequest.onsuccess = () =>
         {   const User = getUserRequest.result;
             if(User && User.password === Password)
-            {console.log('Login Successful!');}
+            {window.location.href = "home.html"}
             else {console.log('UserName or Password Incorrect');}
         };
         transaction.oncomplete= ()=>{db.close();};
